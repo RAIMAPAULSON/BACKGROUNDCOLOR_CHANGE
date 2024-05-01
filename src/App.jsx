@@ -8,11 +8,10 @@ function App() {
 
   const changeBackground = (color) => {
     document.body.style.backgroundColor = color;
-
   };
 
   return (
-    <div className='App' style={{ backgroundColor: backgroundcolor }}>
+    <div className='App' style={{ backgroundColor: backgroundcolor, display: 'flex', flexDirection: 'column',alignItems: 'center'}}>
       <div>
         <a></a>
         <a target="_blank">
@@ -20,11 +19,11 @@ function App() {
         </a>
         <h1>Backgroundcolor Change</h1>
       </div>
-      <div className="card buttons" style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
-        <Button colorName='red' changeBackground={changeBackground} />
-        <Button colorName='blue' changeBackground={changeBackground} />
-        <Button colorName='green' changeBackground={changeBackground} />
-        <Button colorName='yellow' changeBackground={changeBackground} />
+      <div className="card buttons" style={{ display: 'flex', justifyContent: 'center', gap: '45px' }}>
+        <Button colorName='red' changeBackground={changeBackground}/>
+        <Button colorName='blue' changeBackground={changeBackground}/>
+        <Button colorName='green' changeBackground={changeBackground}/>
+        <Button colorName='yellow' changeBackground={changeBackground}/>
       </div>
     </div>
 
